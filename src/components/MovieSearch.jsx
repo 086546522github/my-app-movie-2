@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { MovieContext } from "../context/MovieDetailContext";
+import TempPoster from "../assets/temp-1.png";
 
 const MovieSearch = ({ data }) => {
   const { handleVideoTrailer } = useContext(MovieContext);
@@ -15,13 +16,13 @@ const MovieSearch = ({ data }) => {
   }
 
   const getImageUrl = (posterPath) => {
-    if (!posterPath) return "/temp-1.jpeg";
-    
+    if (!posterPath) return TempPoster;
+
     if (import.meta.env.VITE_IMG_URL && posterPath.startsWith('/')) {
       return `${import.meta.env.VITE_IMG_URL}${posterPath}`;
     }
-    
-    return "/temp-1.jpeg";
+
+    return TempPoster;
   };
 
   return (

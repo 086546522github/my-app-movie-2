@@ -17,19 +17,19 @@ function App() {
     {
       id: 1,
       title: "Avengers: Endgame",
-      poster_path: "/temp-1.jpeg",
+      poster_path: null,
       vote_average: 8.4
     },
     {
       id: 2,
       title: "Spider-Man: No Way Home",
-      poster_path: "/temp-1.jpeg",
+      poster_path: null,
       vote_average: 8.2
     },
     {
       id: 3,
       title: "Black Panther",
-      poster_path: "/temp-1.jpeg",
+      poster_path: null,
       vote_average: 7.9
     }
   ];

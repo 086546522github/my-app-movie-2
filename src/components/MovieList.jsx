@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { MovieContext } from "../context/MovieDetailContext";
+import TempPoster from "../assets/temp-1.png";
 
 const responsive = {
   superLargeDesktop: {
@@ -36,13 +37,13 @@ const MovieList = ({ title, data }) => {
   }
 
   const getImageUrl = (posterPath) => {
-    if (!posterPath) return "/src/assets/temp-1.png";
+    if (!posterPath) return TempPoster;
 
     if (import.meta.env.VITE_IMG_URL && posterPath.startsWith('/')) {
       return `${import.meta.env.VITE_IMG_URL}${posterPath}`;
     }
 
-    return "/src/assets/temp-1.png";
+    return TempPoster;
   };
 
   return (
