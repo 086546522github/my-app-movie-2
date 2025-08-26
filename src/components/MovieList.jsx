@@ -36,15 +36,13 @@ const MovieList = ({ title, data }) => {
   }
 
   const getImageUrl = (posterPath) => {
-    if (!posterPath) return "/temp-1.jpeg";
-    
-    // Nếu có API key và poster path hợp lệ
+    if (!posterPath) return "/src/assets/temp-1.png";
+
     if (import.meta.env.VITE_IMG_URL && posterPath.startsWith('/')) {
       return `${import.meta.env.VITE_IMG_URL}${posterPath}`;
     }
-    
-    // Fallback to local image
-    return "/temp-1.jpeg";
+
+    return "/src/assets/temp-1.png";
   };
 
   return (
